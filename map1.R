@@ -11,7 +11,8 @@ mapArea <- ggplot(mergeDf, aes(map_id = stateName))
 #creating a map visualization
 mapArea <- mapArea + geom_map(map = us, aes(fill= stateArea))     
 #defining the x and y axes values of the map
-mapArea <- mapArea + expand_limits(x = mergeDf$x, y= mergeDf$y)     
+mapArea <- mapArea + expand_limits(x = mergeDf$x, y= mergeDf$y)  
+#coord_map() handles the distortion and aspect ratio of the map#ggtitle() gives a title to the map
 mapArea <- mapArea + coord_map() + ggtitle("Map of US based on state area")     
 mapArea
 
