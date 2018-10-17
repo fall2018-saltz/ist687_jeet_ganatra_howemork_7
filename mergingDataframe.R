@@ -8,3 +8,16 @@ rownames(clean_data) <- as.vector(clean_data[,"stateName"])
 #merging 2 dataframes with attributes from both dataframes
 mergeDataframe <- merge(clean_data, arrests, by = "row.names")
 mergeDataframe
+
+stateName <- state.name     #getting all state names
+stateArea<-state.area      #getting all state areas
+stateCenter <- state.center     #getting coordinates of the centers of all states
+
+otherDf <- data.frame(stateName, stateArea, stateCenter)     #merging above three datasets to form a dataframe
+View(otherDf)
+
+mergeDf <- merge(mergeDf, otherDf, by = "stateName")     #merging columns of arrests and states dataset with reference to stateName and pasting into a new dataset
+View(mergeDf)
+
+mergeDf$stateName <- tolower(mergeDf$stateName)     #converting all state names to lower case because R cannot process capital letters
+View(mergeDf)
