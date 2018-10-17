@@ -2,6 +2,7 @@
 #importing library for ggplot2 and ggmap
 library("ggplot2")
 library("ggmap")
+#turning data from the maps package into a data frame suitable for plotting with ggplot2
 area_map <- map_data("state")
 options(scipen=999)
 map1 <- ggplot(mergeDataframe, aes(map_id = stateName))
