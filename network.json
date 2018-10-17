@@ -77,10 +77,16 @@
             "name": "mergeDataframe.csv"
         },
         {
+            "assigned_to": "jganatra07",
             "desc": "",
-            "name": "map1.R"
+            "name": "map1.R",
+            "task_status": "in progress"
+        },
+        {
+            "desc": "",
+            "name": "map2.R"
         }
     ],
-    "updated_at": "2018-10-17 16:26:00",
+    "updated_at": "2018-10-17 17:11:56",
     "url": "https://github.com/fall2018-saltz/ist687_jeet_ganatra_howemork_7"
 }
