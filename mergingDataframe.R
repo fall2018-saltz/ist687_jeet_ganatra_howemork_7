@@ -9,6 +9,8 @@ rownames(clean_data) <- as.vector(clean_data[,"stateName"])
 mergeDataframe <- merge(clean_data, arrests, by = "row.names")
 mergeDataframe
 
+#Adding the area of each state, and the center of each state, to the merged dataframe, using the ‘state.center’, ‘state.center’ and ‘state.name’ vectors
+
 statecenterx <- state.center$x
 statecentery <- state.center$y
 mergeDataframe <- cbind(mergeDataframe,state.area)
