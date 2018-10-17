@@ -6,5 +6,5 @@ clean_data <- function(dfStates){                                   #Creating a 
   colnames(dfStates) <- c("stateName", "population", "popOver18", "percentOver18")
   return(dfStates)
 }
-states <- newStates() 
+states <- clean_data() 
 View(states)
