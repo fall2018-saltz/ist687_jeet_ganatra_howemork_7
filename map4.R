@@ -20,5 +20,7 @@ map4 <- map4 + scale_fill_gradient(low = "white", high = "red") + xlim(c(x1,x2))
 #defining the x and y axes values of the map and #coord_map() handles the distortion and 
 #aspect ratio of the map
 map4 <- map4 + expand_limits(x = us$long, y = us$lat) + coord_map()
+#geom_point() plots points at the center of every state
+#size attribute controls the size of the points
 map4 <- map4 + geom_point(data = mergeDataframe, mapping = aes(x = x, y = y, size=population))
 map4
