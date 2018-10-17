@@ -73,6 +73,16 @@
             ],
             "source": "map1.R",
             "target": "map1.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "map2",
+                    "type": "png"
+                }
+            ],
+            "source": "map2.R",
+            "target": "map2.png"
         }
     ],
     "nodes": [
@@ -115,6 +125,6 @@
             "name": "map2.png"
         }
     ],
-    "updated_at": "2018-10-17 18:23:22",
+    "updated_at": "2018-10-17 18:23:31",
     "url": "https://github.com/fall2018-saltz/ist687_jeet_ganatra_howemork_7"
 }
