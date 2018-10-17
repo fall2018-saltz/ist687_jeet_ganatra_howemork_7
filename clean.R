@@ -1,5 +1,5 @@
 
-newStates <- function(){                                   #Creating a new function which cleans the dataframe 'dfStates'
+newStates <- function(dfStates){                                   #Creating a new function which cleans the dataframe 'dfStates'
   dfStates <- dfStates[-1,-1:-4]
   lastIndex <- nrow(dfStates)
   dfStates <- dfStates[-lastIndex,]
