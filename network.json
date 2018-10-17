@@ -43,6 +43,16 @@
             ],
             "source": "mergingDataframe.R",
             "target": "mergeDataframe.csv"
+        },
+        {
+            "ports": [
+                {
+                    "input": "mergeDataframe",
+                    "type": "csv"
+                }
+            ],
+            "source": "mergeDataframe.csv",
+            "target": "map1.R"
         }
     ],
     "nodes": [
@@ -71,6 +81,6 @@
             "name": "map1.R"
         }
     ],
-    "updated_at": "2018-10-17 16:25:42",
+    "updated_at": "2018-10-17 16:26:00",
     "url": "https://github.com/fall2018-saltz/ist687_jeet_ganatra_howemork_7"
 }
