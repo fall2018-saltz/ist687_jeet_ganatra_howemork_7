@@ -8,3 +8,11 @@ rownames(clean_data) <- as.vector(clean_data[,"stateName"])
 #merging 2 dataframes with attributes from both dataframes
 mergeDataframe <- merge(clean_data, arrests, by = "row.names")
 mergeDataframe
+
+statecenterx <- state.center$x
+statecentery <- state.center$y
+mergeDataframe <- cbind(mergeDataframe,state.area)
+mergeDataframe <- cbind(mergeDataframe,statecenterx)
+mergeDataframe <- cbind(mergeDataframe,statecentery)
+
+str(mergeDataframe)
