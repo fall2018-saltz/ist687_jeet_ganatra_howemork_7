@@ -93,6 +93,16 @@
             ],
             "source": "mergeDataframe.csv",
             "target": "map3.R"
+        },
+        {
+            "ports": [
+                {
+                    "output": "map3",
+                    "type": "png"
+                }
+            ],
+            "source": "map3.R",
+            "target": "map3.png"
         }
     ],
     "nodes": [
@@ -144,6 +154,6 @@
             "name": "map3.png"
         }
     ],
-    "updated_at": "2018-10-17 18:54:01",
+    "updated_at": "2018-10-17 18:54:11",
     "url": "https://github.com/fall2018-saltz/ist687_jeet_ganatra_howemork_7"
 }
