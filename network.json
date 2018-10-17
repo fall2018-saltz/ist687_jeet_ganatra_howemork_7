@@ -48,12 +48,15 @@
             "name": "clean_data.csv"
         },
         {
-            "assigned_to": "not assigned",
+            "assigned_to": "jganatra07",
             "desc": "",
             "name": "mergingDataframe.R",
-            "task_status": "proposed"
+            "task_status": "in progress"
+        },
+        {
+            "name": "mergeDataframe.csv"
         }
     ],
-    "updated_at": "2018-10-17 16:16:48",
+    "updated_at": "2018-10-17 16:17:55",
     "url": "https://github.com/fall2018-saltz/ist687_jeet_ganatra_howemork_7"
 }
