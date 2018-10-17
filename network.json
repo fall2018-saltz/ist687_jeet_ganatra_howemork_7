@@ -139,8 +139,11 @@
             "desc": "",
             "name": "map3.R",
             "task_status": "in progress"
+        },
+        {
+            "name": "map3.png"
         }
     ],
-    "updated_at": "2018-10-17 18:49:58",
+    "updated_at": "2018-10-17 18:54:01",
     "url": "https://github.com/fall2018-saltz/ist687_jeet_ganatra_howemork_7"
 }
