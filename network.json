@@ -22,7 +22,7 @@
                 }
             ],
             "source": "clean.R",
-            "target": "data.csv"
+            "target": "clean_data.csv"
         }
     ],
     "nodes": [
@@ -30,12 +30,14 @@
             "name": "scprc_est_2017_18_pop_res.csv"
         },
         {
-            "name": "clean.R"
+            "assigned_to": "jganatra07",
+            "name": "clean.R",
+            "task_status": "in progress"
         },
         {
-            "name": "data.csv"
+            "name": "clean_data.csv"
         }
     ],
-    "updated_at": "2018-10-17 16:13:47",
+    "updated_at": "2018-10-17 16:15:29",
     "url": "https://github.com/fall2018-saltz/ist687_jeet_ganatra_howemork_7"
 }
