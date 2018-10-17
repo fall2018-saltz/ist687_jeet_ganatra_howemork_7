@@ -3,6 +3,9 @@
 library("ggplot2")
 library("ggmap")
 
+#turning data from the maps package into a data frame suitable for plotting with ggplot2
+us <- map_data("state") 
+
 #getting the latitude and longitude of an address
 #source attribute hold the source of the geocodes
 latlon <- geocode("new york city, ny", source = "dsk")     
