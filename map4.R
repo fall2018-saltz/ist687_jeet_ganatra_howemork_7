@@ -12,6 +12,7 @@ latlon <- geocode("new york city, ny", source = "dsk")
 latlon
 
 map4 <- ggplot(mergeDataframe,aes(map_id = stateName)) + geom_map(map= us, aes(fill = Murder)) 
-map4 <- map4 + expand_limits(x= mergeDf$x,  y= mergeDf$y) + coord_map() + ggtitle("Zoomed map of US") 
-mapArea3 <- mapArea3 + xlim(latlon$lon-10,latlon$lon+10) + ylim(latlon$lat-10, latlon$lat+10)     #Observations not in range will be dropped completely
+map4 <- map4 + expand_limits(x= mergeDf$x,  y= mergeDf$y) + coord_map() 
+map4 <- map4 + ggtitle("Zoomed map of US") 
+map4 <- map4 + xlim(latlon$lon-10,latlon$lon+10) + ylim(latlon$lat-10, latlon$lat+10)     
 mapArea3
