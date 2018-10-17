@@ -9,7 +9,7 @@ rownames(clean_data) <- as.vector(clean_data[,"stateName"])
 mergeDataframe <- merge(clean_data, arrests, by = "row.names")
 mergeDataframe
 
-stateName <- state.name     #getting all state names
+stateName <- state.name     
 stateArea<-state.area      #getting all state areas
 stateCenter <- state.center     #getting coordinates of the centers of all states
 
