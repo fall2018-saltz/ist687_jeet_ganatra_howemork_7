@@ -12,7 +12,8 @@ latlon <- geocode("new york city, ny", source = "dsk")
 latlon
 #initializing  a ggplot object and passing mergeDf as the input data with map ID as stateName
 #and creating a map visualization
-map4 <- ggplot(mergeDataframe,aes(map_id = stateName)) + geom_map(map= us, aes(fill = Murder)) 
+map4 <- ggplot(mergeDataframe,aes(map_id = stateName)) + geom_map(map= us, aes(fill = Murder))
+#defining the x and y axes values of the map and #coord_map() handles the distortion and aspect ratio of the map
 map4 <- map4 + expand_limits(x= mergeDf$x,  y= mergeDf$y) + coord_map() 
 map4 <- map4 + ggtitle("Zoomed map of US") 
 #Observations not in range will be dropped completely
