@@ -9,5 +9,5 @@ options(scipen=999)
 #expand_limits() to ensure limits include a single value for all plots
 map1 <- ggplot(mergeDataframe, aes(map_id = stateName))
 map1 <- map1 + geom_map(map = area_map ,aes(fill= state.area))
-map1 <- map1 + expand_limits(x = us$long, y = us$lat) + coord_map()
+map1 <- map1 + expand_limits(x = area_map$long, y = area_map$lat) + coord_map()
 map1
