@@ -1,19 +1,24 @@
 
-#copying USArrests into a local variable
-arrests <- USArrests
+library("ggplot2")
+library("ggmap")
+clean_data2 <- USArrests
 
-#creating a column name for rows having states using rownames()
-rownames(clean_data) <- as.vector(clean_data[,"stateName"])
 
-#merging 2 dataframes with attributes from both dataframes
-mergeDataframe <- merge(clean_data, arrests, by = "row.names")
-mergeDataframe
+# save row names as a separate variable
+stateName <- as.vector(rownames(USArrests))
+stateName <- tolower(stateName)
+# add this column to the dataframe as a column names stateName
+clean_data2 <- cbind(clean_data2,stateName, stringsAsFactors=FALSE)
 
-#Adding the area of each state, and the center of each state, to the merged dataframe, 
-#using the ‘state.center’, ‘state.center’ and ‘state.name’ vectors
+# merge the dataframes based on the stateName column in both the dataframes
+# the merge function combines dataframes based on common columns
+# here it merges the dataframes by the common column stateName
+
+mergeDataframe <- merge(clean_data,clean_data2,by="stateName")
+
+
 statecenterx <- state.center$x
 statecentery <- state.center$y
-#the cbind() adds the new columns to the existing dataset
 mergeDataframe <- cbind(mergeDataframe,state.area)
 mergeDataframe <- cbind(mergeDataframe,statecenterx)
 mergeDataframe <- cbind(mergeDataframe,statecentery)
