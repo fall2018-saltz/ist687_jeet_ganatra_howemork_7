@@ -1,4 +1,5 @@
 
+#importing library for ggplot2 and ggmap
 library("ggplot2")
 library("ggmap")
 us <- map_data("state")
