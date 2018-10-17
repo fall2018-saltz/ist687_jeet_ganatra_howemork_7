@@ -1,15 +1,6 @@
 
-library("ggplot2")
-library("ggmap")
-us <- map_data("state")
-
-latlon <- geocode("new york city, ny",source="dsk")
-y1 <- latlon$lat-10
-x1 <- latlon$lon-10
-x2 <- latlon$lon+10
-y2 <- latlon$lat+10
-map4 <- ggplot(mergeDataframe, aes(map_id = stateName))
-map4 <- map4 + geom_map(map = us,aes(fill=Murder))+ scale_fill_gradient(low = "white", high = "red") + xlim(c(x1,x2)) + ylim(c(y1,y2))        
-map4 <- map4 + expand_limits(x = us$long, y = us$lat) + coord_map()
-map4 <- map4 + geom_point(data = mergeDataframe, mapping = aes(x = x, y = y, size=population))
-map4
+latlon <- geocode("new york city, ny", source = "dsk")     #getting the latitude and longitude of an address. source attribute hold the source of the geocodes
+latlon
+mapArea3 <- ggplot(mergeDf,aes(map_id = stateName)) + geom_map(map= us, aes(fill = Murder)) + expand_limits(x= mergeDf$x,  y= mergeDf$y) + coord_map() + ggtitle("Zoomed map of US") 
+mapArea3 <- mapArea3 + xlim(latlon$lon-10,latlon$lon+10) + ylim(latlon$lat-10, latlon$lat+10)     #Observations not in range will be dropped completely
+mapArea3
