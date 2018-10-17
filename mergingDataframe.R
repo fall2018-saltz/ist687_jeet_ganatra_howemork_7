@@ -9,9 +9,10 @@ rownames(clean_data) <- as.vector(clean_data[,"stateName"])
 mergeDataframe <- merge(clean_data, arrests, by = "row.names")
 mergeDataframe
 
+#getting all state names and state areas
 stateName <- state.name     
-stateArea<-state.area      #getting all state areas
-stateCenter <- state.center     #getting coordinates of the centers of all states
+stateArea<-state.area      
+stateCenter <- state.center     
 
 otherDf <- data.frame(stateName, stateArea, stateCenter)     #merging above three datasets to form a dataframe
 
