@@ -19,5 +19,5 @@ otherDf <- data.frame(stateName, stateArea, stateCenter)     #merging above thre
 mergeDataframe <- merge(mergeDataframe, otherDf, by = "stateName")     #merging columns of arrests and states dataset with reference to stateName and pasting into a new dataset
 
 
-mergeDataframef$stateName <- tolower(mergeDataframef$stateName)     #converting all state names to lower case because R cannot process capital letters
+mergeDataframe$stateName <- tolower(mergeDataframe$stateName)     #converting all state names to lower case because R cannot process capital letters
 mergeDataframe
